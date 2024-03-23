@@ -8,7 +8,10 @@ PREREQUISTES REQUIRED:
 1. Install java version 8 or higher to run the jar file.
 2. Install mysql 8.3.x version.
 3. set mysql username =root and password=local123456 or you can change values in "src/main/resources/application.properties" files according to your credentials.
-4. To Run project you can go to  "target/paymentDemo.jar"  use command :  java -jar paymentDemo.jar and project will be started on port 8081.
+4. To Run project :
+     1. you can download project and run using mvn with this command ->  mvn spring-boot:run -Dspring-boot.run.jvmArguments='-Dspring.datasource.username=<your sql username> -Dspring.datasource.password=<your sql password>'
+
+     1. you can go to  "target/paymentDemo.jar"  use command :  java -jar paymentDemo.jar and project will be started on port 8081.
 
 
 
