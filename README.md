@@ -1,7 +1,7 @@
                                                  PAYMENT DEMO
 
 
-This is a demo project bulti in Java 8 with SpringBoot and JPA Hibernate.
+This is a demo project built in Java 8 with SpringBoot and JPA Hibernate.
 
 PREREQUISTES REQUIRED:
 
