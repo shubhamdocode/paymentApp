@@ -61,7 +61,7 @@ transactions of credit voucher are registered with positive value.
 OperationsTypes 
 
 
-| OperationType_ID | Description0    
+| OperationType_ID | Description    
 | -------------    | -------------   
 | 1                |  Normal Purchase
 | 2                |  Purchase with installments 
