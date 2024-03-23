@@ -7,13 +7,16 @@ import org.example.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class AccountServiceImpl implements AccountService {
     @Autowired
     AccountsRepository accountsRepository;
     @Override
     public Accounts getAccountInfo(Integer accountId) {
-        return accountsRepository.findOne(accountId);
+        Optional<Accounts> accountInfo  =accountsRepository.findById(accountId);
+        return accountInfo.orElse(null);
     }
     @Override
     public Integer createAccount(Accounts accountInfo) {
