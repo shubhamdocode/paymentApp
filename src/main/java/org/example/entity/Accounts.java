@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Data
 public class Accounts {
     @Column(name="Account_ID")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Integer accountID;
     @Column(name="Document_Number")

@@ -14,7 +14,7 @@ public class OperationsTypes implements Serializable {
     private static final long serialVersionUID = 0x62A6DA99AABDA8A8L;
 
     @Column(name="OperationType_ID")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Integer operationTypeId;
     @Column (name="Description")

@@ -10,7 +10,7 @@ import java.util.Date;
 public class Transactions {
 
     @Column(name="Transaction_ID")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Integer  txnID;
     @Column(name="Account_ID")
@@ -21,6 +21,8 @@ public class Transactions {
     private Date eventDate;
     @Column(name="OperationType_ID")
     private Integer operationTypeID;
+    @Column(name="Balance")
+    private Float balance;
     @Transient
     private OperationType operationType;
 
@@ -30,6 +32,9 @@ public class Transactions {
         this.eventDate=eventDate;
         this.operationTypeID=operationTypeData.getCode();
         this.operationType=operationTypeData;
+    }
+    public Transactions(){
+
     }
 
 }
