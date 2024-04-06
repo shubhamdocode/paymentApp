@@ -14,6 +14,6 @@ public interface TransactionsRepository extends JpaRepository<org.example.entity
 
     @Query(
             nativeQuery = true,
-            value = "SELECT * FROM transactiondb.Transactions where Account_ID=:accId")
-   List <Transactions> findAllTransactionByAccId(@Param("accId") int accId);
+            value = "SELECT * FROM transactiondb.Transactions  where Account_ID=:accId and Balance < :bal")
+   List <Transactions> findAllTransactionByAccId(@Param("accId") int accId,@Param("bal") int balance);
 }

@@ -35,7 +35,7 @@ public class TransactionServiceImpl implements TransactionService {
                 Float initalCreditAmount=transaction.getAmount();;
                 Float reaminingCreditAmt= initalCreditAmount;
                 Float amountUsed=0.0f;
-                List<Transactions> allTnxs= transactionsRepository.findAllTransactionByAccId(transaction.getAccountID());
+                List<Transactions> allTnxs= transactionsRepository.findAllTransactionByAccId(transaction.getAccountID(),0);
                 for(Transactions txn: allTnxs){
                  if(txn.getBalance()<0 && reaminingCreditAmt>0){
                      reaminingCreditAmt=reaminingCreditAmt-Math.abs(txn.getBalance());
